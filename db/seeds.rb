@@ -1,0 +1,2 @@
+Character.create(first_name: "Clarence", last_name: "McManus", age: 65, gender: "Male")
+Story.create(plot: "A down and out lawyer stumbles upon the buggest case of his life and saves his life at the same time.")
