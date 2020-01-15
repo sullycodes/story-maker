@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_11_004407) do
+ActiveRecord::Schema.define(version: 2019_12_19_031150) do
 
   create_table "characters", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "gender"
     t.integer "age"
+    t.string "image"
     t.integer "story_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_12_11_004407) do
     t.string "plot"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
   end
 
 end

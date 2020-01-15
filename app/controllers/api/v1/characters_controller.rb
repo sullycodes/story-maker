@@ -11,7 +11,7 @@ class Api::V1::CharactersController < ApplicationController
     end
 
     def new
-        @character = Character.new
+        @character = Character.new(character_params)
         render json: @character, status: 200
     end
 
@@ -20,16 +20,16 @@ class Api::V1::CharactersController < ApplicationController
         render json: @character, status: 200
     end
    
-    def edit
-        @character = Character.find(params[:id])
-        render json: @character, status: 200
-    end
+    # def edit
+    #     @character = Character.find(params[:id])
+    #     render json: @character, status: 200
+    # end
 
-    def update
-        @character = Character.find_by(id: params[:id])
-        @character = Character.update(character_params)
-        render json: @character, status: 200
-    end
+    # def update
+    #     @character = Character.find_by(id: params[:id])
+    #     @character = Character.update(character_params)
+    #     render json: @character, status: 200
+    # end
 
     def destroy
         @character = Character.find_by(id: params[:id])
@@ -40,8 +40,9 @@ class Api::V1::CharactersController < ApplicationController
     private 
 
     def character_params
-        params.require(:character).permit(:first_name, :last_name, :gender, :bio)
+        params.require(:character).permit(:gender, :first_name, :last_name, :age, :image, :story_id)
     end
 
+    #end
 
 end

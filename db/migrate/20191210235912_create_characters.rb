@@ -5,6 +5,7 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.string :last_name
       t.string :gender
       t.integer :age
+      t.string :image
       t.integer :story_id
       t.timestamps
     end
